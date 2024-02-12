@@ -1,4 +1,4 @@
-
+# Calculate JFI
 
 def calc_jfi(throughputs):
     num_flows = len(throughputs)
