@@ -6,19 +6,19 @@ def calcJFI(throughputs):
         return 0.0
 
     numerator =sum(throughputs)**2
-    denumerator = len (throughputs) * sum(x ** 2 for x in throughputs)
-    jfi =numerator/denumerator
+    denominator = len (throughputs) * sum(x ** 2 for x in throughputs)
+    jfi =numerator/denominator
     return jfi
 
 #Converts units 
-def units(unit):
-    units=unit[-1]
-    throughput=float(unit[:-1])
+def conevert_units(unit):
+    units=unit[-4]
+    throughput=float(unit[:-5])
     
-    if units.lower() =='k':
+    if units.lower() =='kbps':
         return throughput *1000
     
-    elif unit.lower() =='m':
+    elif units.lower() =='mbps':
         return throughput * 1000000
     else:
         return throughput
@@ -27,7 +27,7 @@ def units(unit):
 def read_file(filename):
     try:
         with open(filename, 'r') as file:
-            throughputs=[units(line.strip()) for line in file]
+            throughputs=[conevert_units(line.strip()) for line in file]
         return throughputs
         
     except FileNotFoundError:
@@ -36,5 +36,14 @@ def read_file(filename):
     except Exception as  e:
         print("An error occurred", e)
         return []
+    
+    
+filename=input("Enter the filename" + " ")
+throughputs =read_file(filename)
+if throughputs:
+    jfi=calcJFI(throughputs)
+    print("JFI",jfi)
+else:
+    print("No throughtput values found")
 
         
