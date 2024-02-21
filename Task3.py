@@ -12,5 +12,5 @@ def check_ports(val):
         print('not valid port')
         sys.exit()
     return value
-parser.ArgumentParsser()
+parser.ArgumentParser()
     
