@@ -37,13 +37,12 @@ def read_file(filename):
         print("An error occurred", e)
         return []
     
-    
-filename=input("Enter the filename" + " ")
-throughputs =read_file(filename)
-if throughputs:
-    jfi=calcJFI(throughputs)
-    print("JFI",jfi)
-else:
-    print("No throughtput values found")
+filename ='Task2.txt'
+
+throughputs=read_file(filename)
+
+jfi=calcJFI(throughputs)
+
+print('jfi:', jfi)    
 
         
