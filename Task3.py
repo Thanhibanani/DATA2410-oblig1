@@ -8,7 +8,7 @@ def check_ports(val):
     try:
         value=int(val)
     except ValueError:
-        raise argparse.ArguTypeError('Integer please')
+        raise argparse.ArgumentTypeError('Integer please')
     if(value<=0):
         raise argparse.ArgumentTypeError('Invalid port')
         sys.exit()
