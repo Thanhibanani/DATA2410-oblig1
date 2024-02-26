@@ -1,3 +1,5 @@
+
+#Imports
 import argparse
 import sys
 
@@ -27,6 +29,7 @@ def valid_ip(ip):
     return ip
 
 
+#Arguements corrisponding to the given table.
 parser=argparse.ArgumentParser()
 parser.add_argument('-s', '--server', action='store_true', help='Enable server mode')
 parser.add_argument('-c', '--client', action='store_true', help='Enable client mode')
