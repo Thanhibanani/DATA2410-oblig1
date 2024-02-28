@@ -4,8 +4,8 @@ The following command used: tracert www.google.no.
 
 What happends when using the tracert command?
 
--Tracert command utilizes ICMP(Internet Control Message Protocol)
--Targets the host using TTL by setting a value in the packets.
+-Tracert command uses ICMP(Internet Control Message Protocol)
+-It targets the host using TTL by setting a value in the packets.
 -TTL is set to 1 for the first packet and increased by 1 for subsequent packets.
 -TTL determines maximum number of hops where the packets goes through before it being discarded.
 -By increasing the TTL for each subsequent packet, tracert can determine number of switches or routers.
