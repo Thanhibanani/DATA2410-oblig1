@@ -1,0 +1,25 @@
+1.
+In this task I choose to use the ping command in powershell since I use windows. 
+
+Table of each hosts and Minimum, Average and Maximum pings
+|------------------------------------------------------|
+|Hosts    	          | Minimum  | Average  | Maximum  |
+|---------------------|----------|----------|----------|
+|Oslomet.no           | 3ms      | 8ms      |  57ms    |
+|---------------------|----------|----------|----------|
+|Ox.ac.uk             | 4ms      | 4ms      | 5ms      |
+|---------------------|----------|----------|----------|
+|Gaia.cs.umass.edu    | timed out|timed out |timed out |
+|---------------------|----------|----------|----------|
+|Sydney.edu.au        | 261ms    | 261ms    |264ms     |
+|---------------------|----------|----------|----------|
+
+2.
+
+There are multiple factors for the effect of differancy in the RTT
+
+-The effects of RTT is caused by the geograpical distance. As shown in the table Sydney.edu.au have much higher RTT because of the distance of the host and client.
+-Propagation delay: Depends on link type such as copper and fiber. 
+-RTT can be affected by the chosen network path
+-Server load time can also affect the RTT
+
