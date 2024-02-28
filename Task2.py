@@ -31,7 +31,7 @@ def read_file(filename):
         with open(filename, 'r') as file:
             throughputs=[conevert_units(line.strip()) for line in file]
         return throughputs
-        
+#Handles error such as FileNotFoundError
     except FileNotFoundError:
         print("File not found.")
         return []
