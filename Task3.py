@@ -1,6 +1,4 @@
 # User friendly Argparse module program
-
-
 #Imports
 import argparse
 import sys
@@ -12,7 +10,7 @@ def check_ports(val):
     try:
         value=int(val)
     except ValueError:
-        raise argparse.ArgumentTypeError('Integer please')
+        raise argparse.ArgumentTypeError('Use integer , please :)')
     #Checks for valid port
     if(value<=0):
         raise argparse.ArgumentTypeError('Invalid port')
